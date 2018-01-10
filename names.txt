@@ -307,7 +307,7 @@
 "/user/twitter/FlumeData.1472594675199"
 "/user/twitter/FlumeData.1472594675200"
 "/user/twitter/FlumeData.1472594675201"
-"/user/twitter/FlumeData.1472594675202"
+"/user/twitter/FlumeData.1472594675202" --
 "/user/twitter/FlumeData.1472594675203"
 "/user/twitter/FlumeData.1472594675204"
 "/user/twitter/FlumeData.1472594675205"
@@ -462,7 +462,7 @@
 "/user/twitter/FlumeData.1472594675354"
 "/user/twitter/FlumeData.1472594675355"
 "/user/twitter/FlumeData.1472594675356"
-"/user/twitter/FlumeData.1472594675357"
+"/user/twitter/FlumeData.1472594675357" --
 "/user/twitter/FlumeData.1472594675358"
 "/user/twitter/FlumeData.1472594675359"
 "/user/twitter/FlumeData.1472594675360"

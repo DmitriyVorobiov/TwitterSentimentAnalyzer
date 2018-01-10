@@ -20,8 +20,11 @@ for filename in glob.glob(path):
         sortedData = sorted(sortedData)
         df = pd.DataFrame(sortedData, columns=['date', 'sentiment'])
         df.to_csv('dataframe-' + filename + '.csv')
-        df = pd.read_csv('dataframe-' + filename + '.csv', dayfirst=True, parse_dates=['date'],
-                         index_col='date', skiprows=[1])
-        agg = df.resample('30S').mean()
-        agg.to_csv('resampled-' + resultName + '.csv')
-        print resultName + 'done'
+        try:
+            df = pd.read_csv('dataframe-' + filename + '.csv', dayfirst=True, parse_dates=['date'],
+                             index_col='date', skiprows=[1])
+            agg = df.resample('30S').mean()
+            agg.to_csv('resampled-' + resultName + '.csv')
+            print resultName + 'done'
+        except TypeError:
+            print resultName + ' TypeError'
