@@ -739,7 +739,7 @@
 "/user/twitter/FlumeData.1484139846340"
 "/user/twitter/FlumeData.1484139846341"
 "/user/twitter/FlumeData.1484139846342"
-"/user/twitter/FlumeData.1484139846343"
+"/user/twitter/FlumeData.1484139846343" --
 "/user/twitter/FlumeData.1484139846344"
 "/user/twitter/FlumeData.1484139846345"
 "/user/twitter/FlumeData.1485030233324"
@@ -862,7 +862,7 @@
 "/user/twitter/FlumeData.1485206855081"
 "/user/twitter/FlumeData.1485206855082"
 "/user/twitter/FlumeData.1485206855083"
-"/user/twitter/FlumeData.1485206855084"
+"/user/twitter/FlumeData.1485206855084" --
 "/user/twitter/FlumeData.1485206855085"
 "/user/twitter/FlumeData.1485206855086"
 "/user/twitter/FlumeData.1485206855087"
@@ -997,7 +997,7 @@
 "/user/twitter/FlumeData.1485206855216"
 "/user/twitter/FlumeData.1485206855217"
 "/user/twitter/FlumeData.1485206855218"
-"/user/twitter/FlumeData.1485206855219"
+"/user/twitter/FlumeData.1485206855219" <--
 "/user/twitter/FlumeData.1485206855220"
 "/user/twitter/FlumeData.1485206855221"
 "/user/twitter/FlumeData.1485206855222"
@@ -1146,7 +1146,7 @@
 "/user/twitter/FlumeData.1485206855365"
 "/user/twitter/FlumeData.1485206855366"
 "/user/twitter/FlumeData.1485206855367"
-"/user/twitter/FlumeData.1485206855368"
+"/user/twitter/FlumeData.1485206855368" <--
 "/user/twitter/FlumeData.1485206855369"
 "/user/twitter/FlumeData.1485206855370"
 "/user/twitter/FlumeData.1485206855371"
@@ -1287,7 +1287,7 @@
 "/user/twitter/FlumeData.1485206855506"
 "/user/twitter/FlumeData.1485206855507"
 "/user/twitter/FlumeData.1485206855508"
-"/user/twitter/FlumeData.1485206855509"
+"/user/twitter/FlumeData.1485206855509" <--
 "/user/twitter/FlumeData.1485206855510"
 "/user/twitter/FlumeData.1485206855511"
 "/user/twitter/FlumeData.1485206855512"
@@ -1427,7 +1427,7 @@
 "/user/twitter/FlumeData.1485206855646"
 "/user/twitter/FlumeData.1485206855647"
 "/user/twitter/FlumeData.1485206855648"
-"/user/twitter/FlumeData.1485206855649"
+"/user/twitter/FlumeData.1485206855649" <--
 "/user/twitter/FlumeData.1485206855650"
 "/user/twitter/FlumeData.1485206855651"
 "/user/twitter/FlumeData.1485206855652"
@@ -1577,7 +1577,7 @@
 "/user/twitter/FlumeData.1485206855796"
 "/user/twitter/FlumeData.1485206855797"
 "/user/twitter/FlumeData.1485206855798"
-"/user/twitter/FlumeData.1485206855799"
+"/user/twitter/FlumeData.1485206855799" <--
 "/user/twitter/FlumeData.1485206855800"
 "/user/twitter/FlumeData.1485206855801"
 "/user/twitter/FlumeData.1485206855802"
@@ -1721,7 +1721,7 @@
 "/user/twitter/FlumeData.1485206855940"
 "/user/twitter/FlumeData.1485206855941"
 "/user/twitter/FlumeData.1485206855942"
-"/user/twitter/FlumeData.1485206855943"
+"/user/twitter/FlumeData.1485206855943" <--
 "/user/twitter/FlumeData.1485206855944"
 "/user/twitter/FlumeData.1485206855945"
 "/user/twitter/FlumeData.1485206855946"

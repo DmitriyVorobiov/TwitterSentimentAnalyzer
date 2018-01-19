@@ -28,3 +28,5 @@ for filename in glob.glob(path):
             print resultName + 'done'
         except TypeError:
             print resultName + ' TypeError'
+        except ValueError:
+            print resultName + ' ValueError'
