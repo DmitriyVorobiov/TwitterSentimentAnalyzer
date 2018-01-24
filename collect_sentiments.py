@@ -23,7 +23,7 @@ for filename in glob.glob(path):
         try:
             df = pd.read_csv('dataframe-' + filename + '.csv', dayfirst=True, parse_dates=['date'],
                              index_col='date', skiprows=[1])
-            agg = df.resample('30S').mean()
+            agg = df.resample('30Min').mean()
             agg.to_csv('resampled-' + resultName + '.csv')
             print resultName + 'done'
         except TypeError:
