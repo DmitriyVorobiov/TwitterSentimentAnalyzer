@@ -6,22 +6,16 @@ from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 
 # Import data
-# data = pd.read_csv('data_stocks.csv')
 data = pd.read_csv('result.csv')
 
 # Drop date variable
-# data = data.drop(['DATE'], 1) //,,,,,,,,,,,,eurusd_close,,,,,,
 data = data.drop(['date'], 1)
 data = data.drop(['eur_subj_mean'], 1)
 data = data.drop(['eur_sent_std'], 1)
 data = data.drop(['eur_subj_std'], 1)
-
-data = data.drop(['eur_sent_mean'], 1) #here
-
 data = data.drop(['usd_subj_mean'], 1)
 data = data.drop(['usd_sent_std'], 1)
 data = data.drop(['usd_subj_std'], 1)
-
 data = data.drop(['eurusd_open'], 1)
 data = data.drop(['eurusd_high'], 1)
 data = data.drop(['eurusd_low'], 1)
@@ -29,11 +23,11 @@ data = data.drop(['eurusd_vol'], 1)
 data = data.drop(['aur_open'], 1)
 data = data.drop(['aur_high'], 1)
 data = data.drop(['aur_low'], 1)
-# data = data.drop(['aur_close'], 1)
 data = data.drop(['aur_vol'], 1)
 data = data.drop(['usd_sent_mean'], 1)
-
-# data[data[0] == ""] = np.NaN
+cols = data.columns.tolist()
+cols = ['eur_sent_mean', 'aur_close', 'eurusd_close']
+data = data[cols]
 data.fillna(method='ffill', inplace=True)
 
 # Dimensions of dataset
@@ -57,17 +51,11 @@ scaler.fit(data_train)
 data_train = scaler.transform(data_train)
 data_test = scaler.transform(data_test)
 
-# # Build X and y
-# X_train = data_train[:, 1:]
-# y_train = data_train[:, 0]
-# X_test = data_test[:, 1:]
-# y_test = data_test[:, 0]
-
 # Build X and y
-X_train = data_train[:, 0:]
-y_train = data_train[:, 1]
+X_train = data_train[:, 0:] # 0 to 1
+y_train = data_train[:, 2]
 X_test = data_test[:, 0:]
-y_test = data_test[:, 1]
+y_test = data_test[:, 2]
 
 # Number of stocks in training data
 n_stocks = X_train.shape[1]
@@ -154,19 +142,18 @@ for e in range(epochs):
         net.run(opt, feed_dict={X: batch_x, Y: batch_y})
 
         # Show progress
-        if np.mod(i, 20) == 0:
+        if np.mod(i, 99) == 0:
             # Prediction
             pred = net.run(out, feed_dict={X: X_test})
+
             fig = plt.figure()
             ax1 = fig.add_subplot(111)
             lineS, = ax1.plot(y_test)
             line1, = ax1.plot(pred[0])
             plt.title('Epoch ' + str(e) + ', Batch ' + str(i))
             plt.show()
+
             plt.pause(0.01)
 # Print final MSE after Training
 mse_final = net.run(mse, feed_dict={X: X_test, Y: y_test})
 print(mse_final)
-
-# mse_final eur_sent-close 0.008491882
-# mse_final aur_close-close 5.2786367e-05
