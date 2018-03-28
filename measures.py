@@ -15,6 +15,10 @@ def measure(dim):
     cols = ['day_of_week','eur_sent_mean', 'aur_close', 'eurusd_close']
     data = data[cols]
 
+    data_frozen = data.copy()
+    for i in range(4):
+        data = pd.concat([data, data_frozen.shift(-i - 1)], axis=1)
+
     # data.fillna(method='ffill', inplace=True)
     data = data.dropna()
 
@@ -134,15 +138,15 @@ def measure(dim):
                 # Prediction
                 pred = net.run(out, feed_dict={X: X_test})
 
-                # fig = plt.figure()
-                # ax1 = fig.add_subplot(111)
-                # lineS, = ax1.plot(y_test)
-                # line1, = ax1.plot(pred[0])
-                # plt.title('Epoch ' + str(e) + ', Batch ' + str(i))
-                # plt.show()
-                # file_name = 'img/epoch_' + str(e) + '_batch_' + str(i) + '.png'
-                # plt.savefig(file_name)
-                # plt.pause(0.01)
+                fig = plt.figure()
+                ax1 = fig.add_subplot(111)
+                lineS, = ax1.plot(y_test)
+                line1, = ax1.plot(pred[0])
+                plt.title('Epoch ' + str(e) + ', Batch ' + str(i))
+                plt.show()
+                file_name = 'img/epoch_' + str(e) + '_batch_' + str(i) + '.png'
+                plt.savefig(file_name)
+                plt.pause(0.01)
                 # print(net.run(mse, feed_dict={X: X_test, Y: y_test}))
     # Print final MSE after Training
     mse_final = net.run(mse, feed_dict={X: X_test, Y: y_test})
