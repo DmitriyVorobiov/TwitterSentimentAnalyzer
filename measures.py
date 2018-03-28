@@ -40,10 +40,10 @@ def measure(dim):
     data_test = scaler.transform(data_test)
 
     # Build X and y
-    X_train = data_train[:, dim:]  # change 0 to 1
-    y_train = data_train[:, 3]
-    X_test = data_test[:, dim:]
-    y_test = data_test[:, 3]
+    X_train = data_train[:-1, dim:]  # change 0 to 1
+    y_train = data_train[1:, 3]
+    X_test = data_test[:-1, dim:]
+    y_test = data_test[1:, 3]
 
     # Number of stocks in training data
     n_stocks = X_train.shape[1]
@@ -134,16 +134,16 @@ def measure(dim):
                 # Prediction
                 pred = net.run(out, feed_dict={X: X_test})
 
-                fig = plt.figure()
-                ax1 = fig.add_subplot(111)
-                lineS, = ax1.plot(y_test)
-                line1, = ax1.plot(pred[0])
-                plt.title('Epoch ' + str(e) + ', Batch ' + str(i))
-                plt.show()
-                file_name = 'img/epoch_' + str(e) + '_batch_' + str(i) + '.png'
-                plt.savefig(file_name)
-                plt.pause(0.01)
-                print(net.run(mse, feed_dict={X: X_test, Y: y_test}))
+                # fig = plt.figure()
+                # ax1 = fig.add_subplot(111)
+                # lineS, = ax1.plot(y_test)
+                # line1, = ax1.plot(pred[0])
+                # plt.title('Epoch ' + str(e) + ', Batch ' + str(i))
+                # plt.show()
+                # file_name = 'img/epoch_' + str(e) + '_batch_' + str(i) + '.png'
+                # plt.savefig(file_name)
+                # plt.pause(0.01)
+                # print(net.run(mse, feed_dict={X: X_test, Y: y_test}))
     # Print final MSE after Training
     mse_final = net.run(mse, feed_dict={X: X_test, Y: y_test})
     print(mse_final)
